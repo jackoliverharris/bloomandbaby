@@ -7,10 +7,19 @@ const App: React.FC = () => {
     <div className="relative min-h-screen w-full">
       {/* Fixed Full-Bleed Background Overlaying the whole viewport */}
       <div 
-        className="fixed inset-0 bg-cover bg-center bg-no-repeat pointer-events-none"
+        className="fixed inset-0 pointer-events-none"
         style={{ 
           backgroundImage: `url('./Gentle Gardening Image Jan 19 2026.jpeg')`,
-          zIndex: -1 
+          backgroundSize: 'cover',
+          backgroundPosition: 'center center',
+          backgroundRepeat: 'no-repeat',
+          zIndex: -1,
+          width: '100vw',
+          height: '100vh',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0
         }}
       >
         {/* Darkening Organic Overlay */}
