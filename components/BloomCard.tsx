@@ -28,10 +28,10 @@ const BloomCard: React.FC = () => {
               <div className="space-y-8 max-w-lg text-stone-200 text-xl md:text-2xl leading-relaxed font-light">
                 <p>
                   Bloom & Baby is a nurturing community for mums and their babies.
+                </p>
                   <p>
                     Designed for early motherhood, when babies are small enough to rest, be carried, or explore close by.
                   </p>
-                </p>
                 <p>
                   Launching spring 2026 just outside of Bath, it’s a calm weekly pause in the early months of motherhood.
                 </p>
