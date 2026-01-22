@@ -19,7 +19,7 @@ const BloomCard: React.FC = () => {
               </h1>
               <div className="max-w-xl">
                 <p className="font-editorial italic text-2xl md:text-3xl text-stone-300 font-light leading-snug">
-                  A gentle place for mums and babies to grow together in the heart of nature.
+                  A resorative place for mums and babies to grow together in the heart of nature.
                 </p>
               </div>
             </div>
@@ -39,7 +39,7 @@ const BloomCard: React.FC = () => {
                 <SignupForm onComplete={() => setIsSubscribed(true)} />
                 {isSubscribed && (
                   <p className="mt-6 text-sm font-editorial italic text-stone-400 animate-in fade-in duration-700">
-                    Thank you. We'll be in touch with the gentle details soon.
+                    Thank you. We'll be in touch with the details soon.
                   </p>
                 )}
               </div>
