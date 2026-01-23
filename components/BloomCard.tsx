@@ -19,7 +19,7 @@ const BloomCard: React.FC = () => {
               </h1>
               <div className="max-w-xl">
                 <p className="font-editorial italic text-2xl md:text-3xl text-stone-300 font-light leading-snug">
-                  A resorative place for mums and babies to grow together in the heart of nature.
+                  A restorative place for mums and babies to grow together in the heart of nature.
                 </p>
               </div>
             </div>
@@ -33,7 +33,7 @@ const BloomCard: React.FC = () => {
                     Designed for early motherhood, when babies are small enough to rest, be carried, or explore close by.
                   </p>
                 <p>
-                  Launching spring 2026 just outside of Bath, it’s a calm weekly pause in the early months of motherhood.
+                  Launching spring 2026 just outside of Bath, it’s a calm weekly pause to reset and support wellbeing.
                 </p>
               </div>
               
