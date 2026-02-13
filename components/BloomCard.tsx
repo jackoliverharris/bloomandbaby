@@ -19,18 +19,19 @@ const BloomCard: React.FC = () => {
               </h1>
               <div className="max-w-xl">
                 <p className="font-editorial italic text-2xl md:text-3xl text-stone-300 font-light leading-snug">
-                  A gentle place for mums and babies to grow together in the heart of nature.
+                  A restorative place for mums and babies to grow together in the heart of nature.
                 </p>
               </div>
             </div>
 
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-16">
               <div className="space-y-8 max-w-lg text-stone-200 text-xl md:text-2xl leading-relaxed font-light">
+                <p>Bloom & Baby is a nurturing community for mums and their babies.</p>
                 <p>
-                  Bloom & Baby is a nurturing community for mums and their babies (0–9 months).
+                  Designed for early motherhood, when babies are small enough to rest, be carried, or explore close by.
                 </p>
                 <p>
-                  Launching spring 2026 just outside of Bath, it’s a calm weekly pause in the early months of motherhood.
+                  Launching spring 2026 just outside of Bath, it’s a calm weekly pause to reset and support wellbeing.
                 </p>
               </div>
               
@@ -39,7 +40,7 @@ const BloomCard: React.FC = () => {
                 <SignupForm onComplete={() => setIsSubscribed(true)} />
                 {isSubscribed && (
                   <p className="mt-6 text-sm font-editorial italic text-stone-400 animate-in fade-in duration-700">
-                    Thank you. We'll be in touch with the gentle details soon.
+                    Thanks! We'll be in touch with the details soon.
                   </p>
                 )}
               </div>
