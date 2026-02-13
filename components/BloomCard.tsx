@@ -35,14 +35,22 @@ const BloomCard: React.FC = () => {
                 </p>
               </div>
               
-              <div className="w-full max-w-md border-t border-stone-300/40 pt-8">
-                <p className="text-[#fcfbf7] mb-8 font-editorial italic text-xl">Join the interest list for Spring 2026</p>
-                <SignupForm onComplete={() => setIsSubscribed(true)} />
-                {isSubscribed && (
-                  <p className="mt-6 text-sm font-editorial italic text-stone-400 animate-in fade-in duration-700">
-                    Thanks! We'll be in touch with the details soon.
-                  </p>
-                )}
+              <div className="w-full max-w-md rounded-2xl border border-stone-200/35 bg-black/35 p-7 shadow-xl backdrop-blur-[2px]">
+                <p className="text-[#fcfbf7] font-editorial text-3xl italic leading-tight">Spring Term 1</p>
+                <p className="mt-3 text-stone-200 text-lg leading-relaxed">
+                  Ready to join us? Reserve your place for upcoming Bloom & Baby sessions.
+                </p>
+                <a
+                  href="https://www.eventbrite.co.uk/e/bloom-baby-spring-term-1-tickets-1982002945163"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-6 inline-flex w-full items-center justify-center border border-stone-200/70 bg-[#3a2f23]/70 px-6 py-4 font-editorial text-2xl italic text-stone-100 transition hover:bg-[#4a3b2c]/80 hover:text-white"
+                >
+                  Reserve a Place
+                </a>
+                <p className="mt-3 text-sm text-stone-400">
+                  Opens Eventbrite in a new tab.
+                </p>
               </div>
             </div>
           </div>
@@ -113,13 +121,26 @@ const BloomCard: React.FC = () => {
           <div className="flex flex-col lg:flex-row items-center justify-between gap-24">
             <div className="max-w-xl space-y-8">
               <p className="font-editorial text-3xl md:text-4xl text-stone-200 leading-snug">
-                Register your interest to be the first to know when booking goes live.
+                Join the newsletter for new session releases, term updates, and gentle reminders.
               </p>
-              {!isSubscribed && (
-                <div className="w-full pt-4">
-                  <SignupForm onComplete={() => setIsSubscribed(true)} />
-                </div>
-              )}
+              <p className="text-stone-300 text-lg leading-relaxed">
+                We send thoughtful updates on upcoming dates and events. No noise, just useful news.
+              </p>
+              <div className="w-full pt-2">
+                {!isSubscribed ? (
+                  <SignupForm
+                    onComplete={() => setIsSubscribed(true)}
+                    submitLabel="Join the newsletter"
+                    loadingLabel="Subscribing..."
+                    placeholder="Your email address"
+                    className="max-w-md"
+                  />
+                ) : (
+                  <p className="mt-4 text-base font-editorial italic text-stone-300 animate-in fade-in duration-700">
+                    Thanks. You&apos;re on the list for future updates.
+                  </p>
+                )}
+              </div>
             </div>
             
             <div className="hidden lg:block">

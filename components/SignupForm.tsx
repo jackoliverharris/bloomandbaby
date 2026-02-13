@@ -3,9 +3,19 @@ import React, { useState, useEffect, useRef } from 'react';
 
 interface SignupFormProps {
   onComplete?: () => void;
+  submitLabel?: string;
+  loadingLabel?: string;
+  placeholder?: string;
+  className?: string;
 }
 
-const SignupForm: React.FC<SignupFormProps> = ({ onComplete }) => {
+const SignupForm: React.FC<SignupFormProps> = ({
+  onComplete,
+  submitLabel = 'Join the interest list',
+  loadingLabel = 'One moment...',
+  placeholder = 'Email address',
+  className = '',
+}) => {
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -96,7 +106,7 @@ const SignupForm: React.FC<SignupFormProps> = ({ onComplete }) => {
     <form 
       ref={formRef}
       onSubmit={handleSubmit} 
-      className="flex flex-col space-y-6 w-full max-w-sm ml-block-form" 
+      className={`flex flex-col space-y-6 w-full max-w-sm ml-block-form ${className}`} 
       action="https://assets.mailerlite.com/jsonp/2049220/forms/177041923383494272/subscribe" 
       method="post" 
       target="_blank"
@@ -107,7 +117,7 @@ const SignupForm: React.FC<SignupFormProps> = ({ onComplete }) => {
           type="email"
           name="fields[email]"
           className="form-control w-full bg-transparent border-b border-stone-300/60 py-4 text-[#fcfbf7] focus:outline-none focus:border-white/80 transition-all duration-700 placeholder:text-stone-400 font-light text-xl"
-          placeholder="Email address"
+          placeholder={placeholder}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
@@ -128,11 +138,11 @@ const SignupForm: React.FC<SignupFormProps> = ({ onComplete }) => {
               <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
               <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
             </svg>
-            <span>One moment...</span>
+            <span>{loadingLabel}</span>
           </span>
         ) : (
           <>
-            <span className="font-light italic">Join the interest list</span>
+            <span className="font-light italic">{submitLabel}</span>
             <span className="group-hover:translate-x-2 transition-transform duration-500 font-serif">→</span>
           </>
         )}

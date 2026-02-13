@@ -66,7 +66,7 @@ const faqItems: FAQItem[] = [
     question: 'Where do the sessions take place?',
     paragraphs: [
       'Sessions take place in Withyditch near Bath.',
-      "Location details and directions are shared after booking so it is easy to find us on the day.",
+      "Location details and directions are shared after you reserve your place so it is easy to find us on the day.",
       'We use an outdoor garden space where possible, with cover or indoor alternatives for wet or unsuitable weather.',
     ],
   },
@@ -128,10 +128,10 @@ const faqItems: FAQItem[] = [
     ],
   },
   {
-    question: 'How do I book?',
+    question: 'How do I reserve a place?',
     paragraphs: [
-      'You can book directly via the Eventbrite link below.',
-      'If you have questions before booking, feel free to get in touch. I am always happy to help.',
+      'You can reserve your place directly via the Eventbrite link below.',
+      'If you have questions before reserving a place, feel free to get in touch. I am always happy to help.',
     ],
   },
   {
@@ -194,15 +194,15 @@ const FAQPage: React.FC = () => {
                 </p>
               ))}
 
-              {item.question === 'How do I book?' && (
+              {item.question === 'How do I reserve a place?' && (
                 <p className="mt-4 text-lg leading-relaxed text-stone-100">
                   <a
-                    href="https://www.eventbrite.com/e/bloom-baby-spring-term-1-tickets-1982002992304?aff=oddtdtcreator"
+                    href="https://www.eventbrite.co.uk/e/bloom-baby-spring-term-1-tickets-1982002945163"
                     target="_blank"
                     rel="noreferrer"
                     className="break-all underline decoration-stone-300/80 underline-offset-4 hover:text-white"
                   >
-                    https://www.eventbrite.com/e/bloom-baby-spring-term-1-tickets-1982002992304?aff=oddtdtcreator
+                    https://www.eventbrite.co.uk/e/bloom-baby-spring-term-1-tickets-1982002945163
                   </a>
                 </p>
               )}

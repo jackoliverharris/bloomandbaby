@@ -2,11 +2,13 @@
 import React, { useEffect, useState } from 'react';
 import BloomCard from './components/BloomCard';
 import FAQPage from './components/FAQPage';
+import AboutPage from './components/AboutPage';
 
 const App: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = window.location.pathname.replace(/\/+$/, '') || '/';
   const isFaqPage = pathname === '/faq';
+  const isAboutPage = pathname === '/about';
 
   useEffect(() => {
     if (!menuOpen) return;
@@ -23,7 +25,9 @@ const App: React.FC = () => {
 
   const backgroundImageUrl = isFaqPage
     ? '/faq-background.jpeg'
-    : '/Gentle%20Gardening%20Image%20Jan%2019%202026.jpeg';
+    : isAboutPage
+      ? '/About.jpeg'
+      : '/Gentle%20Gardening%20Image%20Jan%2019%202026.jpeg';
 
   return (
     <div className="relative min-h-screen w-full">
@@ -70,7 +74,7 @@ const App: React.FC = () => {
         ></div>
       </div>
 
-      {!isFaqPage && (
+      {!isFaqPage && !isAboutPage && (
         <>
           <button
             type="button"
@@ -115,6 +119,9 @@ const App: React.FC = () => {
                   <a href="/faq" className="block border-b border-stone-300/20 pb-2 hover:text-white">
                     FAQ
                   </a>
+                  <a href="/about" className="block border-b border-stone-300/20 pb-2 hover:text-white">
+                    About
+                  </a>
                 </div>
               </nav>
             </div>
@@ -123,7 +130,7 @@ const App: React.FC = () => {
       )}
 
       <main className="w-full relative z-10">
-        {isFaqPage ? <FAQPage /> : <BloomCard />}
+        {isFaqPage ? <FAQPage /> : isAboutPage ? <AboutPage /> : <BloomCard />}
       </main>
     </div>
   );
