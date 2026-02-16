@@ -11,21 +11,21 @@ const BloomCard: React.FC = () => {
       {/* Section 1: Hero - Full Screen Typography */}
       <section className="min-h-screen flex flex-col justify-center px-8 md:px-24 lg:px-48 py-24">
         <div className="max-w-6xl w-full animate-in fade-in slide-in-from-bottom-12 duration-1000">
-          <div className="space-y-24">
+          <div className="space-y-20">
             <div className="space-y-8">
-              <h1 className="font-editorial text-7xl md:text-9xl lg:text-[12rem] font-light tracking-tighter leading-[0.85] text-[#FCFBF7]">
+              <h1 className="font-editorial text-7xl md:text-9xl lg:text-[12rem] font-light tracking-tighter leading-[0.85] text-[#FCFBF7] [text-shadow:0_4px_18px_rgba(0,0,0,0.42)]">
                 Bloom <br />
                 <span className="italic ml-[0.1em] md:ml-[0.2em]">& Baby</span>
               </h1>
               <div className="max-w-xl">
-                <p className="font-editorial italic text-2xl md:text-3xl text-stone-300 font-light leading-snug">
+                <p className="font-editorial italic text-2xl md:text-3xl text-[#f1e8db] font-light leading-snug [text-shadow:0_2px_10px_rgba(0,0,0,0.35)]">
                   A restorative place for mums and babies to grow together in the heart of nature.
                 </p>
               </div>
             </div>
 
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-16">
-              <div className="space-y-8 max-w-lg text-stone-200 text-xl md:text-2xl leading-relaxed font-light">
+            <div className="flex flex-col md:flex-row md:items-start justify-between gap-16">
+              <div className="space-y-8 max-w-lg text-[#f2eadf] text-xl md:text-2xl leading-relaxed font-light [text-shadow:0_2px_10px_rgba(0,0,0,0.35)]">
                 <p>Bloom & Baby is a nurturing community for mums and their babies.</p>
                 <p>
                   Designed for early motherhood, when babies are small enough to rest, be carried, or explore close by.
@@ -35,22 +35,19 @@ const BloomCard: React.FC = () => {
                 </p>
               </div>
               
-              <div className="w-full max-w-md rounded-2xl border border-stone-200/35 bg-black/35 p-7 shadow-xl backdrop-blur-[2px]">
-                <p className="text-[#fcfbf7] font-editorial text-3xl italic leading-tight">Spring Term 1</p>
-                <p className="mt-3 text-stone-200 text-lg leading-relaxed">
+              <div className="w-full max-w-md">
+                <p className="text-[#fcf7ef] font-editorial text-3xl italic leading-tight [text-shadow:0_2px_10px_rgba(0,0,0,0.35)]">Spring Term 1</p>
+                <p className="mt-3 text-[#efe5d8] text-lg leading-relaxed [text-shadow:0_2px_10px_rgba(0,0,0,0.35)]">
                   Ready to join us? Reserve your place for upcoming Bloom & Baby sessions.
                 </p>
                 <a
                   href="https://www.eventbrite.co.uk/e/bloom-baby-spring-term-1-tickets-1982002945163"
                   target="_blank"
-                  rel="noreferrer"
-                  className="mt-6 inline-flex w-full items-center justify-center border border-stone-200/70 bg-[#3a2f23]/70 px-6 py-4 font-editorial text-2xl italic text-stone-100 transition hover:bg-[#4a3b2c]/80 hover:text-white"
+                  rel="noopener noreferrer"
+                  className="mt-6 inline-flex w-full items-center justify-center border border-[#a8af95]/80 bg-[#7d886d] px-6 py-4 font-editorial text-2xl italic text-[#f7f4ec] transition hover:bg-[#6f7a60]"
                 >
                   Reserve a Place
                 </a>
-                <p className="mt-3 text-sm text-stone-400">
-                  Opens Eventbrite in a new tab.
-                </p>
               </div>
             </div>
           </div>
@@ -58,18 +55,18 @@ const BloomCard: React.FC = () => {
       </section>
 
       {/* Section 2: The Experience - Asymmetrical Grid */}
-      <section className="min-h-screen flex items-center justify-center px-8 md:px-24 lg:px-48 py-32 bg-black/13">
+      <section className="min-h-screen flex items-center justify-center px-8 md:px-24 lg:px-48 py-32">
         <div className="max-w-7xl w-full grid lg:grid-cols-2 gap-24 items-center">
           <div className="space-y-12">
-            <h2 className="font-editorial text-5xl md:text-7xl text-[#FCFBF7] font-light tracking-tight leading-none">
+            <h2 className="font-editorial text-5xl md:text-7xl text-[#f8f1e6] font-light tracking-tight leading-none [text-shadow:0_2px_10px_rgba(0,0,0,0.35)]">
               The weekly <br /><span className="italic">ritual</span>
             </h2>
-            <p className="text-stone-300 text-xl md:text-2xl font-light italic leading-relaxed max-w-md">
+            <p className="text-[#efe4d6] text-xl md:text-2xl font-light italic leading-relaxed max-w-md [text-shadow:0_2px_10px_rgba(0,0,0,0.35)]">
               A sanctuary created for you, so your baby is comfortably included and you are truly nurtured.
             </p>
           </div>
           
-          <div className="grid gap-12 border-l border-stone-500/20 pl-12">
+          <div className="grid gap-12 border-l border-stone-200/30 pl-12">
             {[
               { title: "Nature's Rhythm", desc: "Simple gardening and nature-based activities tailored for the seasons." },
               { title: "Mindful Moments", desc: "Gentle mindfulness and wellbeing practices designed for new motherhood." },
@@ -77,9 +74,9 @@ const BloomCard: React.FC = () => {
               { title: "Connection", desc: "A warming cuppa, nourishing treats, and time for honest conversation." }
             ].map((item, i) => (
               <div key={i} className="space-y-2 group">
-                <span className="text-stone-500 font-editorial italic text-lg tracking-widest block mb-1">0{i+1}</span>
-                <h3 className="text-2xl md:text-3xl font-editorial text-[#FCFBF7] group-hover:text-stone-200 transition-colors">{item.title}</h3>
-                <p className="text-stone-400 text-lg font-light max-w-md">{item.desc}</p>
+                <span className="text-[#ddccb4] font-editorial italic text-lg tracking-widest block mb-1">0{i+1}</span>
+                <h3 className="text-2xl md:text-3xl font-editorial text-[#fcf7ef] group-hover:text-white transition-colors [text-shadow:0_2px_8px_rgba(0,0,0,0.3)]">{item.title}</h3>
+                <p className="text-[#eee2d3] text-lg font-light max-w-md [text-shadow:0_2px_8px_rgba(0,0,0,0.3)]">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -89,41 +86,41 @@ const BloomCard: React.FC = () => {
       {/* Section 3: Large Format Quote */}
       <section className="min-h-[80vh] flex items-center justify-center px-8 py-32">
         <div className="max-w-5xl w-full text-center space-y-12">
-          <div className="w-px h-24 bg-gradient-to-b from-transparent to-stone-500/50 mx-auto"></div>
-          <h2 className="font-editorial text-4xl md:text-6xl lg:text-7xl text-stone-200 font-light tracking-tight italic leading-tight">
+          <div className="w-px h-24 bg-gradient-to-b from-transparent to-stone-200/60 mx-auto"></div>
+          <h2 className="font-editorial text-4xl md:text-6xl lg:text-7xl text-[#f8f1e6] font-light tracking-tight italic leading-tight [text-shadow:0_3px_12px_rgba(0,0,0,0.35)]">
             "A space to be creative, connect with other local mums, and take part in something that nurtures you, not just your baby."
           </h2>
-          <div className="w-px h-24 bg-gradient-to-t from-transparent to-stone-500/50 mx-auto"></div>
+          <div className="w-px h-24 bg-gradient-to-t from-transparent to-stone-200/60 mx-auto"></div>
         </div>
       </section>
 
       {/* Section 4: Practicalities - Horizontal Spread */}
       <section className="min-h-screen flex flex-col justify-between px-8 md:px-24 lg:px-48 py-24">
         <div className="max-w-7xl w-full mx-auto space-y-32">
-          <div className="flex flex-col md:flex-row justify-between items-start gap-12 md:gap-24 border-b border-stone-500/20 pb-24">
+          <div className="flex flex-col md:flex-row justify-between items-start gap-12 md:gap-24 border-b border-stone-200/30 pb-24">
             <div className="space-y-4">
-              <p className="text-stone-500 uppercase tracking-widest text-xs">When</p>
-              <h3 className="font-editorial text-4xl md:text-5xl lg:text-6xl text-[#FCFBF7] italic">Spring 2026</h3>
-              <p className="text-stone-400 text-lg">Weekday mornings</p>
+              <p className="text-[#d9c8b1] uppercase tracking-widest text-xs">When</p>
+              <h3 className="font-editorial text-4xl md:text-5xl lg:text-6xl text-[#fcf7ef] italic [text-shadow:0_2px_8px_rgba(0,0,0,0.3)]">Spring 2026</h3>
+              <p className="text-[#eadccc] text-lg [text-shadow:0_2px_8px_rgba(0,0,0,0.25)]">Weekday mornings</p>
             </div>
             <div className="space-y-4">
-              <p className="text-stone-500 uppercase tracking-widest text-xs">Where</p>
-              <h3 className="font-editorial text-4xl md:text-5xl lg:text-6xl text-[#FCFBF7]">Bath</h3>
-              <p className="text-stone-400 text-lg">Just outside the city</p>
+              <p className="text-[#d9c8b1] uppercase tracking-widest text-xs">Where</p>
+              <h3 className="font-editorial text-4xl md:text-5xl lg:text-6xl text-[#fcf7ef] [text-shadow:0_2px_8px_rgba(0,0,0,0.3)]">Bath</h3>
+              <p className="text-[#eadccc] text-lg [text-shadow:0_2px_8px_rgba(0,0,0,0.25)]">Just outside the city</p>
             </div>
             <div className="space-y-4 max-w-xs">
-              <p className="text-stone-500 uppercase tracking-widest text-xs">Availability</p>
-              <h3 className="font-editorial text-3xl text-[#FCFBF7] italic">Intimate Groups</h3>
-              <p className="text-stone-400 text-lg">Places are strictly limited to keep conversation easy.</p>
+              <p className="text-[#d9c8b1] uppercase tracking-widest text-xs">Availability</p>
+              <h3 className="font-editorial text-3xl text-[#fcf7ef] italic [text-shadow:0_2px_8px_rgba(0,0,0,0.3)]">Intimate Groups</h3>
+              <p className="text-[#eadccc] text-lg [text-shadow:0_2px_8px_rgba(0,0,0,0.25)]">Places are strictly limited to keep conversation easy.</p>
             </div>
           </div>
 
           <div className="flex flex-col lg:flex-row items-center justify-between gap-24">
             <div className="max-w-xl space-y-8">
-              <p className="font-editorial text-3xl md:text-4xl text-stone-200 leading-snug">
+              <p className="font-editorial text-3xl md:text-4xl text-[#fcf7ef] leading-snug [text-shadow:0_2px_10px_rgba(0,0,0,0.3)]">
                 Join the newsletter for new session releases, term updates, and gentle reminders.
               </p>
-              <p className="text-stone-300 text-lg leading-relaxed">
+              <p className="text-[#eadccc] text-lg leading-relaxed [text-shadow:0_2px_8px_rgba(0,0,0,0.25)]">
                 We send thoughtful updates on upcoming dates and events. No noise, just useful news.
               </p>
               <div className="w-full pt-2">
@@ -136,7 +133,7 @@ const BloomCard: React.FC = () => {
                     className="max-w-md"
                   />
                 ) : (
-                  <p className="mt-4 text-base font-editorial italic text-stone-300 animate-in fade-in duration-700">
+                  <p className="mt-4 text-base font-editorial italic text-[#e6d8c6] animate-in fade-in duration-700">
                     Thanks. You&apos;re on the list for future updates.
                   </p>
                 )}
@@ -144,7 +141,7 @@ const BloomCard: React.FC = () => {
             </div>
             
             <div className="hidden lg:block">
-               <p className="font-editorial text-[14rem] text-stone-400/20 pointer-events-none select-none italic">Bloom</p>
+               <p className="font-editorial text-[14rem] text-stone-200/20 pointer-events-none select-none italic">Bloom</p>
             </div>
           </div>
         </div>
@@ -152,10 +149,10 @@ const BloomCard: React.FC = () => {
         <footer className="w-full max-w-7xl mx-auto pt-48 pb-12">
           <div className="flex flex-col md:flex-row justify-between items-end gap-12">
             <div className="space-y-8">
-              <h2 className="font-editorial text-6xl text-[#FCFBF7] font-light italic opacity-90">Bloom & Baby</h2>
-              <div className="text-stone-500 text-[10px] md:text-xs uppercase tracking-[0.4em] flex items-center space-x-8">
+              <h2 className="font-editorial text-6xl text-[#fcf7ef] font-light italic opacity-90 [text-shadow:0_2px_10px_rgba(0,0,0,0.3)]">Bloom & Baby</h2>
+              <div className="text-[#d5c4ad] text-[10px] md:text-xs uppercase tracking-[0.4em] flex items-center space-x-8">
                 <span>Come as you are</span>
-                <span className="h-1 w-1 bg-stone-700 rounded-full"></span>
+                <span className="h-1 w-1 bg-[#d9c8b1] rounded-full"></span>
                 <span>Grow together</span>
               </div>
             </div>
@@ -168,7 +165,7 @@ const BloomCard: React.FC = () => {
                   href="https://www.instagram.com/bloomandbabybath" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-stone-500 hover:text-stone-300 transition-colors"
+                  className="text-[#d5c4ad] hover:text-[#fffaf0] transition-colors"
                   aria-label="Instagram"
                 >
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -176,7 +173,7 @@ const BloomCard: React.FC = () => {
                   </svg>
                 </a>
               </div>
-              <p className="text-stone-500 text-[10px] tracking-widest">
+                <p className="text-[#d5c4ad] text-[10px] tracking-widest">
                 Made with{' '}
                 <svg className="inline w-3 h-3 mx-[0.0625rem]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
