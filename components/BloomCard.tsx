@@ -35,7 +35,7 @@ const BloomCard: React.FC = () => {
                 </p>
               </div>
               
-              <div className="w-full max-w-md">
+              <div className="w-full max-w-md self-start md:-mt-2">
                 <p className="text-[#fcf7ef] font-editorial text-3xl italic leading-tight [text-shadow:0_2px_10px_rgba(0,0,0,0.35)]">Spring Term 1</p>
                 <p className="mt-3 text-[#efe5d8] text-lg leading-relaxed [text-shadow:0_2px_10px_rgba(0,0,0,0.35)]">
                   Ready to join us? Reserve your place for upcoming Bloom & Baby sessions.
@@ -48,6 +48,30 @@ const BloomCard: React.FC = () => {
                 >
                   Reserve a Place
                 </a>
+
+                <div className="mt-10 border-t border-stone-200/30 pt-8">
+                  <p className="font-editorial text-2xl italic text-[#fcf7ef] leading-snug [text-shadow:0_2px_10px_rgba(0,0,0,0.3)]">
+                    Join the newsletter for new term releases and updates.
+                  </p>
+                  <p className="mt-3 text-[#eadccc] text-base leading-relaxed [text-shadow:0_2px_8px_rgba(0,0,0,0.25)]">
+                    No noise, just useful news for upcoming dates and events.
+                  </p>
+                  <div className="w-full pt-4">
+                    {!isSubscribed ? (
+                      <SignupForm
+                        onComplete={() => setIsSubscribed(true)}
+                        submitLabel="Join the newsletter"
+                        loadingLabel="Subscribing..."
+                        placeholder="Your email address"
+                        className="max-w-md"
+                      />
+                    ) : (
+                      <p className="mt-4 text-base font-editorial italic text-[#e6d8c6] animate-in fade-in duration-700">
+                        Thanks. You&apos;re on the list for future updates.
+                      </p>
+                    )}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -115,34 +139,8 @@ const BloomCard: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-24">
-            <div className="max-w-xl space-y-8">
-              <p className="font-editorial text-3xl md:text-4xl text-[#fcf7ef] leading-snug [text-shadow:0_2px_10px_rgba(0,0,0,0.3)]">
-                Join the newsletter for new session releases, term updates, and gentle reminders.
-              </p>
-              <p className="text-[#eadccc] text-lg leading-relaxed [text-shadow:0_2px_8px_rgba(0,0,0,0.25)]">
-                We send thoughtful updates on upcoming dates and events. No noise, just useful news.
-              </p>
-              <div className="w-full pt-2">
-                {!isSubscribed ? (
-                  <SignupForm
-                    onComplete={() => setIsSubscribed(true)}
-                    submitLabel="Join the newsletter"
-                    loadingLabel="Subscribing..."
-                    placeholder="Your email address"
-                    className="max-w-md"
-                  />
-                ) : (
-                  <p className="mt-4 text-base font-editorial italic text-[#e6d8c6] animate-in fade-in duration-700">
-                    Thanks. You&apos;re on the list for future updates.
-                  </p>
-                )}
-              </div>
-            </div>
-            
-            <div className="hidden lg:block">
-               <p className="font-editorial text-[14rem] text-stone-200/20 pointer-events-none select-none italic">Bloom</p>
-            </div>
+          <div className="hidden lg:block">
+            <p className="font-editorial text-[14rem] text-stone-200/20 pointer-events-none select-none italic text-right">Bloom</p>
           </div>
         </div>
 
